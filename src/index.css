@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0d0d1f;
+  background: linear-gradient(to bottom, #0d0d1f, #10102a);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, #1f1f3d 25%, transparent 25%, transparent 75%, #1f1f3d 75%, #1f1f3d);
+  background-size: 40px 40px; /* Adjust grid size */
+  opacity: 0.1; /* Adjust grid opacity */
+  z-index: -1; /* Place behind content */
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-workout {
+  animation: workout 2s infinite alternate;
+}
+
+.active {
+  opacity: 1;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotate {
+  transition: transform 0.5s ease-in-out;
+}
+
+.fade {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bounce {
+  animation: bounce 1s infinite alternate;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
