@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  EnvelopeIcon,
-  QuestionMarkCircleIcon,
-} from "@heroicons/react/24/outline";
-// import {
-//   LinkedinIcon,
-//   TwitterIcon,
-// } from "@heroicons/react/24/outline";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"; // React Icons
 
 const Footer = () => {

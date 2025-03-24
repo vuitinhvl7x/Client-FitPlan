@@ -6,6 +6,8 @@ import LandingPage from "./pages/LandingPage";
 import Features from "./pages/Features";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
 import { useStore } from "./store";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -22,6 +24,8 @@ export default function App() {
         <Route path="/features" element={<Features />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         <Route
           path="/survey"
           element={

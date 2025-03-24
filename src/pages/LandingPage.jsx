@@ -21,15 +21,15 @@ const LandingPage = () => {
           </h1>
           <p className="text-lg mb-8 text-neutral-600">
             FitPlan is your personal fitness companion, designed to help you
-            reach your health and wellness goals. Get personalized workout
-            plans tailored to your needs.
+            reach your health and wellness goals. Get personalized workout plans
+            tailored to your needs.
           </p>
           <div className="flex space-x-4">
             <Link
-              to="/survey"
+              to="/login"
               className="bg-primary-500 hover:bg-primary-700 text-white py-2 px-4 rounded-full transition-colors"
             >
-              Take the Fitness Survey
+              Start Workout
             </Link>
             <a
               href="/demo"

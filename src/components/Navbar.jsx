@@ -27,7 +27,7 @@ const Navbar = () => {
           Contact Us
         </Link>
         <Link
-          to="/dashboard"
+          to="/login"
           className="ml-12 btn btn-primary rounded-full hover:scale-105 font-normal"
         >
           Start Workout
