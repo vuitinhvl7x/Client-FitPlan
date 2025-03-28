@@ -1,5 +1,5 @@
-import React from 'react'
-import { useStore } from '../store'
+import React from "react";
+import { useStore } from "../store";
 
 function ExerciseCard({ exercise }) {
   return (
@@ -11,11 +11,11 @@ function ExerciseCard({ exercise }) {
         <p>Reps: {exercise.reps}</p>
       </div>
     </div>
-  )
+  );
 }
 
 export default function Dashboard() {
-  const { user, workoutPlan } = useStore()
+  const { user, workoutPlan } = useStore();
 
   return (
     <div className="container py-16">
@@ -23,11 +23,11 @@ export default function Dashboard() {
       <div className="card">
         <h2 className="section-title">Your Workout Plan</h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {workoutPlan.exercises.map(exercise => (
+          {workoutPlan.exercises.map((exercise) => (
             <ExerciseCard key={exercise.id} exercise={exercise} />
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
